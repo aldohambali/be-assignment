@@ -40,7 +40,7 @@ model Payment {
 
 model Transaction {
   id            Int       @id @default(autoincrement())
-  created       DateTime  @default(now())
+  created       DateTime?  //@default(now())
   title         String
   amount        Float
   currency      String
@@ -48,7 +48,7 @@ model Transaction {
   payment_id    Int 
   to_address    String
   status        String
-  status_updated  DateTime?  @default(now())
+  status_updated  DateTime?  //@default(now())
 }
 
 
